@@ -43,7 +43,7 @@ describe('Events test', () => {
     expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 3000);
   });
   it('vendor sends thank you note', () => {
-    vendor.thankYou(testPayload);
+    vendor.thank(testPayload);
     expect(consoleSpy).toHaveBeenCalled();
     expect(setTimeout).toHaveBeenCalledTimes(2);
   });
