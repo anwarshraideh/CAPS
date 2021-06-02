@@ -33,7 +33,7 @@ function thank(payload) {
 
   console.log(`VENDOR: Thank you for delivering ${payload.payload.orderID}`);
   
-  console.log('EVENT ', payload);
+  console.log('EVENT', payload);
 }
 
 module.exports = {
