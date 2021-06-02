@@ -54,4 +54,6 @@ describe('Events test', () => {
       expect(consoleSpy).toHaveBeenLastCalledWith(expect.any(Function), 3000);        
     }, 3000);
   });
+
+  
 });
