@@ -34,17 +34,24 @@ describe('Events test', () => {
   });
   it('driver picks up orders after 1 second', () => {
     driver.pickUp(testPayload);
-    expect(consoleSpy).toHaveBeenCalled();
-    expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 1000);
+    setTimeout(() => {
+      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenLastCalledWith(expect.any(Function), 1000);        
+    }, 1000);
   });
   it('driver delivers orders after 3 second', () => {
     driver.delivered(testPayload);
-    expect(consoleSpy).toHaveBeenCalled();
-    expect(setTimeout).toHaveBeenLastCalledWith(expect.any(Function), 3000);
+    setTimeout(() => {
+      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenLastCalledWith(expect.any(Function), 3000);        
+    }, 3000);
+
   });
   it('vendor sends thank you note', () => {
     vendor.thank(testPayload);
-    expect(consoleSpy).toHaveBeenCalled();
-    expect(setTimeout).toHaveBeenCalledTimes(2);
+    setTimeout(() => {
+      expect(consoleSpy).toHaveBeenCalled();
+      expect(consoleSpy).toHaveBeenLastCalledWith(expect.any(Function), 3000);        
+    }, 3000);
   });
 });

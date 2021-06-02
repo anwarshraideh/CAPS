@@ -17,7 +17,7 @@ function delivered(payload) {
     
   payload.event = 'inTransit';
   payload.time = new Date().toISOString(); 
-  console.log('EVENT ', payload); 
+  console.log('EVENT', payload); 
 
   setTimeout(() => {
     console.log(`DRIVER : delivered up ${payload.payload.orderID}`); 
